@@ -1,8 +1,7 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-export const routes: Routes = [
+const routes: Routes = [
     {
         path: 'lazy',
         loadChildren: () => import('./lazy-loaded/lazy-loaded.module').then(m => m.LazyLoadedModule)

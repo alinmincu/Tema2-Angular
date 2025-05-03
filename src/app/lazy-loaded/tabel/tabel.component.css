@@ -1,0 +1,45 @@
+button.add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 5px;
+    color: black;
+    padding: 5px 10px;
+}
+
+button.add-button:hover {
+    background: black;
+    color: white;
+}
+
+button.edit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1890ff;
+    background: #e6f7ff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.edit-button i {
+    font-size: 18px;
+    color: #1890ff;
+}
+
+button.edit-button:hover {
+    background: #1890ff;
+    border-color: #40a9ff;
+}
+
+button.edit-button:hover i {
+    color: white;
+}

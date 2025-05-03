@@ -1,0 +1,48 @@
+<button nz-button nzType="primary" class="add-button" (click)="openAddModal()">Add</button>
+
+<div style="margin: 0 20px;">
+    <nz-table #basicTable [nzBordered]="true" [nzData]="displayedData" [nzSize]="'middle'" [nzShowPagination]="false">
+        <thead>
+            <tr>
+                <th nzWidth="20%">ID</th>
+                <th nzWidth="20%">Name</th>
+                <th nzWidth="20%">Character</th>
+                <th nzWidth="20%">Birth date</th>
+                <th nzWidth="20%">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of displayedData">
+                <td>{{ data.id }}</td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.character | uppercaseDescription }}</td>
+                <td>{{ data.birthDate }}</td>
+                <td>
+                    <button nz-button nzType="link" class="edit-button" nzShape="circle" (click)="openEditModal(data)">
+                        <i nz-icon nzType="edit"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+
+    <nz-pagination [nzPageSize]="pageSize" [nzTotal]="listOfData.length" [(nzPageIndex)]="pageIndex"
+        (nzPageIndexChange)="onPageChange($event)"></nz-pagination>
+</div>
+
+<ng-template #addFormTemplate>
+    <form [formGroup]="addForm">
+        <div>
+            <label>Name: </label>
+            <input formControlName="name" />
+        </div>
+        <div>
+            <label>Character: </label>
+            <input formControlName="character" />
+        </div>
+        <div>
+            <label>Birth date: </label>
+            <input formControlName="date" type="date" />
+        </div>
+    </form>
+</ng-template>
