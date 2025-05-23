@@ -10,8 +10,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   selector: 'app-modal-edit',
   standalone: true,
   imports: [CommonModule, NzTableModule, NzButtonModule, NzIconModule, NzPaginationModule, ReactiveFormsModule],
-  templateUrl: './modal-edit.component.html',
-  styleUrls: ['./modal-edit.component.css']
+  templateUrl: './modal-edit.component.html'
 })
 export class ModalEditComponent {
   pageSize: number = 10;
@@ -23,12 +22,19 @@ export class ModalEditComponent {
   ];
 
   addForm: FormGroup;
+  editForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.addForm = this.fb.group({
       name: [''],
       character: [''],
       date: ['']
+    });
+
+    this.editForm = this.fb.group({
+      name: ['', []],
+      character: ['', []],
+      date: ['', []]
     });
   }
 
@@ -39,5 +45,21 @@ export class ModalEditComponent {
 
   editItem(item: { name: string; character: string; birthDate: string }): void {
     console.log('Editing item:', item);
+  }
+
+  setFormValues(data: { name: string; character: string; birthDate: string }) {
+    this.editForm.patchValue({
+      name: data.name,
+      character: data.character,
+      date: data.birthDate
+    });
+  }
+
+  get formValue() {
+    return this.editForm.value;
+  }
+
+  resetForm() {
+    this.editForm.reset();
   }
 }

@@ -1,29 +1,4 @@
-<button nz-button (click)="addItem()">Add</button>
-<nz-table #basicTable [nzData]="listOfData" [nzPageSize]="pageSize" [nzPageIndex]="pageIndex">
-    <thead>
-        <tr>
-            <th nzWidth="25%">Name</th>
-            <th nzWidth="25%">Character</th>
-            <th nzWidth="25%">Birth date</th>
-            <th nzWidth="25%">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of basicTable.data">
-            <td>{{ item.name }}</td>
-            <td>{{ item.character }}</td>
-            <td>{{ item.birthDate }}</td>
-            <td>
-                <button nz-button nzType="default" (click)="editItem(item)">
-                    <i nz-icon nzType="edit"></i> Edit
-                </button>
-            </td>
-        </tr>
-    </tbody>
-</nz-table>
-<nz-pagination [(nzPageIndex)]="pageIndex" [nzTotal]="listOfData.length"></nz-pagination>
-
-<form [formGroup]="addForm">
+<form [formGroup]="editForm">
     <div>
         <label>Name: </label>
         <input formControlName="name" />

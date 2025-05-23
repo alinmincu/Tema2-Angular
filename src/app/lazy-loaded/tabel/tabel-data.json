@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Sebastian Stan",
+        "character": "Winter Soldier",
+        "birthDate": "1982-08-13"
+    },
+    {
+        "id": 2,
+        "name": "Tom Hiddleston",
+        "character": "Loki",
+        "birthDate": "1981-02-09"
+    },
+    {
+        "id": 3,
+        "name": "Anthony Mackie",
+        "character": "Falcon",
+        "birthDate": "1978-09-23"
+    },
+    {
+        "id": 4,
+        "name": "Chris Evans",
+        "character": "Captain America",
+        "birthDate": "1981-06-13"
+    },
+    {
+        "id": 5,
+        "name": "Scarlett Johansson",
+        "character": "Black Widow",
+        "birthDate": "1984-11-22"
+    },
+    {
+        "id": 6,
+        "name": "Mark Ruffalo",
+        "character": "Hulk",
+        "birthDate": "1967-11-22"
+    },
+    {
+        "id": 7,
+        "name": "Jeremy Renner",
+        "character": "Hawkeye",
+        "birthDate": "1971-01-07"
+    },
+    {
+        "id": 8,
+        "name": "Tom Holland",
+        "character": "Spider-Man",
+        "birthDate": "1996-06-01"
+    },
+    {
+        "id": 9,
+        "name": "Chris Hemsworth",
+        "character": "Thor",
+        "birthDate": "1983-08-11"
+    },
+    {
+        "id": 10,
+        "name": "Robert Downey Jr.",
+        "character": "Iron Man",
+        "birthDate": "1965-04-04"
+    }
+]

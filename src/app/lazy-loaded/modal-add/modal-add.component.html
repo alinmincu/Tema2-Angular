@@ -1,0 +1,23 @@
+<form [formGroup]="addForm">
+    <div>
+        <label>Name: </label>
+        <input formControlName="name" />
+        <div *ngIf="addForm.get('name')?.invalid && addForm.get('name')?.touched" class="error">
+            Name is required.
+        </div>
+    </div>
+    <div>
+        <label>Character: </label>
+        <input formControlName="character" />
+        <div *ngIf="addForm.get('character')?.invalid && addForm.get('character')?.touched" class="error">
+            Character is required (min 5 chars).
+        </div>
+    </div>
+    <div>
+        <label>Birth date: </label>
+        <input formControlName="date" type="date" />
+        <div *ngIf="addForm.get('date')?.invalid && addForm.get('date')?.touched" class="error">
+            Date is required.
+        </div>
+    </div>
+</form>
